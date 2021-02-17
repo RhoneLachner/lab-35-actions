@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './App.css';
+import PostForm from './PostForm';
 
 export default function App() {
   return <>
@@ -8,17 +8,6 @@ export default function App() {
       <h1>Posts</h1>
     </div>
 
-    <section className={styles.inputSection}>
-      <h2>Create Post</h2>
-      <form>
-        <input name="title"></input>
-        <textarea name="body"></textarea>
-        <button>Submit ✓</button>
-      </form>
-    </section>
-
-    <section>
-      <ul></ul>
-    </section>
+    <PostForm />
   </>;
 }
