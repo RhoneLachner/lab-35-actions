@@ -1,5 +1,15 @@
 import React from 'react';
+import PostForm from './PostForm';
+import PostList from './PostList';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return <>
+    <div>
+      <a href="/">Home</a>
+      <h1>Posts</h1>
+    </div>
+
+    <PostForm />
+    <PostList />
+  </>;
 }

@@ -1,0 +1,21 @@
+section, .inputSection, form {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    justify-content: center;
+}
+input, button, textarea {
+    display: flex;
+    flex-direction: column;
+    align-self: center;
+    justify-self: center;
+}
+input {
+    margin-bottom: 1rem;
+}
+button {
+    margin: .5rem; 
+    width: 4.5rem;
+    height: 1.4rem;
+    text-align: center;
+}
