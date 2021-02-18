@@ -5,7 +5,9 @@ describe('post selectors', () => {
 
   it('selects posts from state', () => {
     const state = {
-      posts: [{ title: 'hello i am title', body: 'hello i am body' }]
+      posts:{
+        posts: [{ title: 'hello i am title', body: 'hello i am body' }]
+      }
     };
  
     const posts = getPosts(state);
@@ -14,7 +16,9 @@ describe('post selectors', () => {
 
   it('counts number of posts', () => {
     const state = {
-      posts: [{ title: 'hello i am title', body: 'hello i am body'  }]
+      posts:{
+        posts: [{ title: 'hello i am title', body: 'hello i am body' }]
+      }
     };
       
     expect(countPosts(state)).toEqual(1);
