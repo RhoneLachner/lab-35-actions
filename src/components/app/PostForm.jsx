@@ -38,11 +38,20 @@ const PostForm = () => {
             onChange={({ target }) => setBody(target.value)}>
           </textarea>
 
-          <button>Submit ✓</button>
+          <button
+            data-testid="create"
+            onClick={() =>
+              dispatch({ type: 'CREATE_POST' })
+            }>Submit ✓</button>
         </form>
       </section>
+
       <section>
-        <ul></ul>
+        <ul>
+
+
+        </ul>
+        
       </section>
     </>
   );
