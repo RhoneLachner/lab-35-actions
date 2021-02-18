@@ -1,5 +1,6 @@
 import React from 'react';
 import PostForm from './PostForm';
+import PostList from './PostList';
 
 export default function App() {
   return <>
@@ -9,5 +10,6 @@ export default function App() {
     </div>
 
     <PostForm />
+    <PostList />
   </>;
 }

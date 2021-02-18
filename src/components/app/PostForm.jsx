@@ -12,8 +12,8 @@ const PostForm = () => {
 
   const handleSubmit = event => {
     event.preventDefault();
-  
-    dispatch(createPost({ title, body }));
+    const post = { title, body };
+    dispatch(createPost(post));
   
   };
 
@@ -38,20 +38,8 @@ const PostForm = () => {
             onChange={({ target }) => setBody(target.value)}>
           </textarea>
 
-          <button
-            data-testid="create"
-            onClick={() =>
-              dispatch({ type: 'CREATE_POST' })
-            }>Submit ✓</button>
+          <button data-testid="create">Submit ✓</button>
         </form>
-      </section>
-
-      <section>
-        <ul>
-
-
-        </ul>
-        
       </section>
     </>
   );
