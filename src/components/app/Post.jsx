@@ -2,8 +2,9 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { useDispatch } from 'react-redux';
 import { deletePost } from '../../actions/postActions';
+// import Comments from './Comment';
 
-const Post = ({ title, body, comments }) => {
+const Post = ({ title, body }) => {
   const dispatch = useDispatch();
     
   const handleClick = () => {
@@ -19,19 +20,9 @@ const Post = ({ title, body, comments }) => {
         <dt>Body</dt>
         <dd>{body}</dd>
 
-        <dt>Comments:</dt>
-        <dd>{comments.map(comment => (
-          <>
-            <input 
-              id={comment}
-              name="comments"
-              type="text"/>
-            <label htmlFor={comment}>{comment}</label>
-            <button>Submit Comment</button>
-          </>
-        ))
-        
-        }</dd>
+        {/* <Comments /> */}
+
+
       </dl>
       <button onClick={handleClick}>Delete Post</button>
     </>
@@ -41,7 +32,6 @@ const Post = ({ title, body, comments }) => {
 Post.propTypes = {
   title: PropTypes.string.isRequired,
   body: PropTypes.string.isRequired,
-  comments: PropTypes.arrayOf(PropTypes.string.isRequired).isRequired,
 };
 
 export default Post;

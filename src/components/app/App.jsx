@@ -1,5 +1,5 @@
 import React from 'react';
-import Comments from './Comments';
+// import Comments from './Comments';
 import PostForm from './PostForm';
 import PostList from './PostList';
 
@@ -12,6 +12,5 @@ export default function App() {
 
     <PostForm />
     <PostList />
-    <Comments />
   </>;
 }

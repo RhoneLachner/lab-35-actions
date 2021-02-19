@@ -1,6 +1,9 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getPosts } from '../../selectors/selector';
+import CommentInput from './CommentInput';
+import CommentOutput from './CommentOutput';
+
 import Post from './Post';
 
 const PostList = () => {
@@ -8,9 +11,12 @@ const PostList = () => {
   console.log(posts);
 
   const postElements = posts.map(post => (
-    <li key={post.title}>
-      <Post {...post} />
-    </li>
+    <>
+      <li key={post.title}>
+        <Post {...post} />
+      </li>
+    </>
+
   ));
 
   return (
