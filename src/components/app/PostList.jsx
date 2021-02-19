@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import { getPosts } from '../../selectors/selector';
 import CommentInput from './CommentInput';
 import CommentOutput from './CommentOutput';
+// import CommentInput from './CommentInput';
+// import CommentOutput from './CommentOutput';
 
 import Post from './Post';
 
@@ -14,6 +16,8 @@ const PostList = () => {
     <>
       <li key={post.title}>
         <Post {...post} />
+        <CommentOutput />
+        <CommentInput />
       </li>
     </>
 
@@ -22,7 +26,9 @@ const PostList = () => {
   return (
     <ul>
       {postElements}
+      
     </ul>
+    
   );
 };
 

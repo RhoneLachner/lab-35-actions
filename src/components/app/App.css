@@ -1,9 +1,14 @@
+#root {
+    align-content: center;
+}
+
 section, .inputSection, form {
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
 }
+
 input, button, textarea {
     display: flex;
     flex-direction: column;
@@ -15,7 +20,29 @@ input {
 }
 button {
     margin: .5rem; 
-    width: 4.5rem;
-    height: 1.4rem;
     text-align: center;
+}
+
+.deletePostButton {
+    justify-self: left;
+}
+
+section.postListSection {
+    width: 50%
+}
+
+dl {
+    list-style-type: hidden;
+    list-style: hidden;
+    text-align: left;
+}
+
+li {
+    list-style: none;
+}
+
+dt {
+    list-style: hidden;
+    font-weight: 600;
+    font-style: italic;
 }
