@@ -1,6 +1,6 @@
 import { getPosts } from './selector';
 
-export const getComments = state => state.comments.list;
+export const getComments = state => state.comments.comments;
 export const getDisplayComment = state => {
   const posts = getPosts(state);
   const comments = getComments(state);

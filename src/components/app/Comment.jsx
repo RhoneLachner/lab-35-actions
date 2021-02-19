@@ -7,27 +7,29 @@ import { deleteComment } from '../../actions/commentActions';
 
 
 
-const Comment = ({ commentBody }) => {
+const Comment = ({ comment }) => {
   const dispatch = useDispatch();
     
   const handleClick = () => {
-    dispatch(deleteComment(commentBody));
+    dispatch(deleteComment(comment));
   };
 
   return (
     <>
-      <dl>
-        <dt>Comments:</dt>
-        <dd>{commentBody}</dd>
-      </dl>
+      <section className="commentListSection">
+        <dl>
+          <dt>Comments:</dt>
+          <dd>{comment}</dd>
+        </dl>
 
-      <button onClick={handleClick}>Delete Comment</button>
+        <button onClick={handleClick}>Delete Comment</button>
+      </section>
     </>
   );
 };
  
 Comment.propTypes = {
-  commentBody: PropTypes.string.isRequired,
+  comment: PropTypes.string.isRequired,
   
 };
 

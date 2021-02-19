@@ -1,7 +1,8 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { getComments } from '../../selectors/commentSelector';
-import CommentInput from './CommentInput';
+// import CommentInput from './CommentInput';
+import Comment from './Comment';
 
 const CommentOutput = () => {
   const comments = useSelector(getComments);
@@ -9,8 +10,8 @@ const CommentOutput = () => {
 
   const commentElements = comments.map(comment => (
     <>
-      <li key={comment.commentBody}>
-        <CommentInput {...comment} />
+      <li key={comment}>
+        <Comment comment={comment} />
       </li>
     </>
   ));

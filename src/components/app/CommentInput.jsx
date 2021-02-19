@@ -1,3 +1,4 @@
+/* eslint-disable max-len */
 import React, { useState } from 'react';
 import { createComment } from '../../actions/commentActions';
 import styles from './App.css';
@@ -12,8 +13,7 @@ const CommentInput = () => {
       
   const handleSubmit = event => {
     event.preventDefault();
-    const comment = { commentBody };
-    dispatch(createComment(comment));
+    dispatch(createComment(commentBody));
         
   };
         
@@ -33,7 +33,6 @@ const CommentInput = () => {
           <button data-testid="createComment">Submit Comment ✓</button>
         </form>
       </section>
-
     </>
   );
 };
