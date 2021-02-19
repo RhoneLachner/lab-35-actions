@@ -1,6 +1,8 @@
 import React, { useState } from 'react';
 import { createPost } from '../../actions/postActions';
-import { useDispatch } from '../../state/PostProvider';
+import { useDispatch } from 'react-redux';
+// import CommentInput from './CommentInput';
+// import CommentOutput from './CommentOutput';
 
 import styles from './App.css';
 
@@ -39,6 +41,7 @@ const PostForm = () => {
           </textarea>
 
           <button data-testid="create">Submit ✓</button>
+       
         </form>
       </section>
     </>
